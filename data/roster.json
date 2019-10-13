@@ -1,0 +1,19 @@
+{
+    "number_of_tributes": 4,
+    "1": {
+        "name": "John",
+        "gender": "M"
+    },
+    "2": {
+       "name": "Dan",
+       "gender": "M"
+    },
+    "3": {
+        "name": "Anne",
+        "gender": "F"
+    },
+    "4": {
+        "name": "Emma",
+        "gender": "F"
+    }
+}

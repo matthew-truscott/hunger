@@ -8,8 +8,14 @@ extern crate rand;
 
 mod tribute;
 mod roster;
+mod game;
 
 use std::io;
+use std::fs;
+use std::path::PathBuf;
+use std::path::Path;
+use std::env;
+use serde_json::{Value};
 
 use rand::Rng;
 
@@ -32,8 +38,15 @@ fn read_input() -> String {
     match io::stdin().read_line(&mut input) {
         Ok(_) => {},
         Err(error) => println!("error: {}", error),
-    }
+    };
     input
+}
+
+fn read_file(filename: String) -> String {
+    let contents = fs::read_to_string(filename)
+        .expect("Something went wrong reading the file");
+
+    contents
 }
 
 fn parse_choice() -> i32 {
@@ -70,7 +83,7 @@ fn parse_positive_integer(upper_limit: i32) -> i32 {
 }
 
 /// Interactive Roster Creation
-fn interactive_roster_creation() -> i32 {
+fn interactive_roster_creation(game_roster: &mut roster::Roster) -> i32 {
     let mut status: i32 = 0;
 
     println!("----------------------------------");
@@ -84,10 +97,10 @@ fn interactive_roster_creation() -> i32 {
     let number = parse_choice();
 
     if number == 1 {
-        status = create_roster_from_scratch();
+        status = create_roster_from_scratch(game_roster);
     }
     else if number == 2 {
-        status = create_roster_from_files();
+        status = create_roster_from_files(game_roster);
     }
     else if number == 3 {
         status = 1 
@@ -96,10 +109,9 @@ fn interactive_roster_creation() -> i32 {
     status
 }
 
-fn create_roster_from_scratch() -> i32 {
+fn create_roster_from_scratch(game_roster: &mut roster::Roster) -> i32 {
     let mut status: i32 = 0;
     let mut stage: i32 = 0;
-    let mut test_roster = roster::Roster::new();
 
     println!("---------------------------");
     println!("Create roster from scratch.");
@@ -129,10 +141,9 @@ fn create_roster_from_scratch() -> i32 {
                 println!("Added!");
             }
             // now add tributes
-            let test_roster_ref = &mut test_roster;
             for _ in 0..number {
                 let test_tribute = tribute::Tribute::new();
-                test_roster_ref.add_tribute(Box::new(test_tribute));
+                game_roster.add_tribute(Box::new(test_tribute));
             }
 
             // proceed to the next stage
@@ -145,8 +156,7 @@ fn create_roster_from_scratch() -> i32 {
             // check choices, if invalid selection, continue
             if choice.trim() == String::from("review") {
                 println!("Review");
-                let test_roster_ref = &mut test_roster;
-                println!("{}", test_roster_ref.to_string());
+                println!("{}", game_roster.to_string());
             }
             else {
                 println!("Invalid input");
@@ -163,21 +173,102 @@ fn create_roster_from_scratch() -> i32 {
     status
 }
 
-fn create_roster_from_files() -> i32 {
+fn find_data_directory() -> PathBuf {
+    env::current_dir()
+        .expect("Cannot access current directory")
+        .as_path().join(Path::new("data"))
+}
+
+fn create_roster_from_files(game_roster: &mut roster::Roster) -> i32 {
     let mut status: i32 = 0;
+    let datadir = find_data_directory();
+    let mut stage: i32 = 0;
+
+    loop {
+        if stage == 0 {
+            println!("Enter file to read (default: roster.json)");
+            let choice = read_input();
+            let mut slice_choice = choice.trim();
+            if slice_choice.ends_with(".json") {
+                slice_choice = &slice_choice[..slice_choice.len()-5];
+            }
+            
+            let roster_path = Path::new(slice_choice);
+            let mut abs_pathbuf = datadir.join(roster_path);
+            abs_pathbuf.set_extension("json");
+
+            if ! abs_pathbuf.exists() {
+                println!("{} doesn't exist! defaulting...", abs_pathbuf.display());
+                abs_pathbuf = datadir.join("roster.json");
+            }
+
+            if ! abs_pathbuf.exists() {
+                println!("default file doesn't exist! PANIC");
+            }
+
+            println!("{} found!", abs_pathbuf.display());
+
+            // now read as json
+            let data = fs::read_to_string(abs_pathbuf)
+                .expect("Something went wrong reading the file");
+
+            let mut v: Value = Value::Null;
+            match serde_json::from_str(data.as_str()) {
+                Ok(result) => v = result,
+                Err(e) => println!("Error {}", e)
+            }
+
+            // now read v for number of tributes
+            let number_of_tributes = v["number_of_tributes"].as_i64().unwrap();
+
+            println!("{}", number_of_tributes);
+
+            // the tributes should now be accessed correctly 
+            for i in 1..number_of_tributes+1 {
+                let test_tribute = tribute::Tribute::from_data(
+                    v[format!("{}", i)]["name"].as_str().unwrap(),
+                    v[format!("{}", i)]["gender"].as_str().unwrap());
+                game_roster.add_tribute(Box::new(test_tribute));
+            }
+            stage = 1;
+        }
+        else if stage == 1 {
+            // review creation and make changes if necessary
+            println!("To review roster, enter `review`, for other commands, enter `help`.");
+            let choice: String = read_input();
+            // check choices, if invalid selection, continue
+            if choice.trim() == String::from("review") {
+                println!("Review");
+                println!("{}", game_roster.to_string());
+            }
+            else if choice.trim() == String::from("continue") {
+                status = 0;
+                break;
+            }
+            else {
+                println!("Invalid input");
+                continue;
+            }
+        }
+    }
+
     status
 }
 
 fn main() {
     let mut number = 0;
+    let mut game_roster: roster::Roster = roster::Roster::new();
     loop {
         if number == 0 {
             welcome_text();
         }
         else if number == 1 {
-            let status = interactive_roster_creation();
+            let status = interactive_roster_creation(&mut game_roster);
             if status == 1 {
                 number = 0;
+            }
+            else if status == 0 {
+                number = 384;
             }
         }
         else if number == 2 {
@@ -185,6 +276,11 @@ fn main() {
         }
         else {
             println!("invalid selection\n");
+        }
+        if number == 384 {
+            // roster complete, run simulation!
+            // TODO maybe add a way to check the game settings
+            let status = game::gameloop(&mut game_roster);
         }
 
         number = parse_choice();
