@@ -47,15 +47,11 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
 
     let mut rng = rand::thread_rng();
 
+    game_roster.default_gender_setup();
+
     // read in the events...
     let data = fs::read_to_string("data/events.json")
         .expect("Something went wrong reading the file");
-
-    let j = serde_json::to_string(&game_roster);
-    match j {
-        Ok(result) => println!("{}", result),
-        Err(e) => println!("Error {}", e)
-    }
 
     let mut events: Value = Value::Null;
     match serde_json::from_str(data.as_str()) {
@@ -128,10 +124,11 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
                 "{} cannon shots can be heard from the distance.",
                 game_roster.count_dead_on_day(day));
             if game_roster.count_dead_on_day(day) == 0 {
-                consecutive_rounds_without_deaths += 1
+                consecutive_rounds_without_deaths += 1;
             }
             else {
-                consecutive_rounds_without_deaths = 0
+                consecutive_rounds_without_deaths = 0;
+                println!("{}", game_roster.death_summary_on_day(day));
             }
             continue;
         }
@@ -162,11 +159,11 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
             Err(e) => println!("template error.\n {}", e)
         }
 
-        let context_map = json!({
+        let title_map = json!({
             "0".to_string(): day
         });
         
-        let rendered = tt.render("title_tmp", &context_map);
+        let rendered = tt.render("title_tmp", &title_map);
 
         match rendered {
             Ok(r) => println!("{}", r),
@@ -248,17 +245,15 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
             //println!("action number: {}", action_number);
             //println!("message: {}", action["msg"].as_str().unwrap());
 
-            let context_map: Map<String, Value> = (0..action_number*game_roster.n_info())
-                .map(|i| (i.to_string(), game_roster
-                    .get_info(action_members[i % action_members.len()] 
-                        + (i / action_members.len() * game_roster.len())).into()))
+            let context_map: Map<String, Value> = (0..action_number)
+                .map(|i| (i.to_string(), game_roster.serialize_tribute(action_members[i]).into()))
                 .collect::<Map<String, Value>>();
 
+            //println!("CONTEXT MAP");
             //for (key, val) in context_map.iter() {
             //    println!("{}: {}", key, val)
             //}
 
-            
             let rendered = tt.render("msg_tmp", &context_map);
 
             match rendered {
@@ -272,6 +267,9 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
         }
 
     }
+
+    // Simulation complete, print details
+    println!("{}", game_roster.game_summary());
 
     status
 }

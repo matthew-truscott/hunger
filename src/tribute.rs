@@ -37,6 +37,10 @@ pub struct Tribute {
     pub deathday: i32,
     pub killcount: i32,
     pub gender: Gender,
+    pub genN: String,
+    pub genA: String,
+    pub genG: String,
+    pub genS: String,
 }
 
 impl Serialize for Tribute {
@@ -47,6 +51,10 @@ impl Serialize for Tribute {
         let mut state = serializer.serialize_struct("Roster", 1)?;
         state.serialize_field("name", &self.name)?;
         state.serialize_field("gender", &self.gender.as_str())?;
+        state.serialize_field("genN", &self.genN.as_str())?;
+        state.serialize_field("genA", &self.genA.as_str())?;
+        state.serialize_field("genG", &self.genG.as_str())?;
+        state.serialize_field("genS", &self.genS.as_str())?;
         state.skip_field("id")?;
         state.skip_field("alive")?;
         state.skip_field("available")?;
@@ -59,7 +67,8 @@ impl Serialize for Tribute {
 impl Tribute {
     pub fn new() -> Tribute {
         let tribute_id = TRIBUTE_COUNTER.fetch_add(1, Ordering::SeqCst);
-        Tribute{name:String::from("null"), id:tribute_id, alive:false, available:false, deathday:0, killcount:0, gender:Gender::A}
+        Tribute{name:String::from("null"), id:tribute_id, alive:false, available:false, deathday:0, killcount:0, gender:Gender::A,
+            genN:String::from("null"), genA:String::from("null"), genG:String::from("null"), genS:String::from("null")}
     }
     pub fn from_data(name: &str, gen: &str) -> Tribute {
         let tribute_id = TRIBUTE_COUNTER.fetch_add(1, Ordering::SeqCst);
@@ -67,7 +76,8 @@ impl Tribute {
             Ok(v) => v,
             Err(_) => Gender::A
         };
-        Tribute{name:String::from(name), id:tribute_id, alive:true, available:true, deathday:0, killcount:0, gender:gen_result}
+        Tribute{name:String::from(name), id:tribute_id, alive:true, available:true, deathday:0, killcount:0, gender:gen_result,
+            genN:String::from("null"), genA:String::from("null"), genG:String::from("null"), genS:String::from("null")}
     }
     pub fn to_string(self) -> String {
         format!("Name: {}, ID: {}", self.name, self.id)

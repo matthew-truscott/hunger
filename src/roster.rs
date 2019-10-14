@@ -1,6 +1,8 @@
 use super::tribute;
 
 use serde::ser::{Serialize, Serializer, SerializeMap};
+use serde_json::Value;
+use serde_json::json;
 
 pub struct Roster {
     tribute_vec: Vec<Box<tribute::Tribute>>,
@@ -73,25 +75,6 @@ impl Roster {
         let s: String = self.tribute_vec[i].name.clone();
         s
     }
-    pub fn get_info(&self, i: usize) -> String {
-        //println!("get_info: {}", i);
-        if i / self.tribute_vec.len() > 0 {    
-            let g: tribute::Gender = self.tribute_vec[i-self.tribute_vec.len()].gender.clone();
-            if g == tribute::Gender::M {
-                "m".to_string()
-            }
-            else {
-                "".to_string()
-            }
-        }
-        else {
-            let s: String = self.tribute_vec[i].name.clone();
-            s
-        }
-    }
-    pub fn n_info(&self) -> usize {
-        2 // the number of information pieces currently handled by get_info
-    }
     pub fn kill(&mut self, i: usize, day: i32) {
         self.tribute_vec[i].alive = false;
         self.tribute_vec[i].available = false;
@@ -123,11 +106,52 @@ impl Roster {
         n
     }
     pub fn death_summary_on_day(&self, day: i32) -> String {
-        let mut output: String = String::from("");
+        let mut output: String = String::from("The following tributes have died today: \n");
         for item in self.tribute_vec.iter() {
             if item.deathday == day {
-                output = format!("{}{} is DEAD\n", output, item.name);
+                output = format!("{}{}\n", output, item.name);
             }
+        }
+        output
+    }
+    pub fn default_gender_setup(&mut self) {
+        for item in self.tribute_vec.iter_mut() {
+            match item.gender {
+                tribute::Gender::M => {
+                    item.genN = String::from("he");
+                    item.genA = String::from("him");
+                    item.genG = String::from("his");
+                    item.genS = String::from("himself");
+                }
+                tribute::Gender::F => {
+                    item.genN = String::from("she");
+                    item.genA = String::from("her");
+                    item.genG = String::from("her");
+                    item.genS = String::from("herself");
+                }
+                tribute::Gender::A => {
+                    item.genN = String::from("they");
+                    item.genA = String::from("them");
+                    item.genG = String::from("their");
+                    item.genS = String::from("themselves");
+                }
+            }
+        }
+    }
+    pub fn serialize_tribute(&self, i: usize) -> Value {
+        json!(self.tribute_vec[i])
+    }
+    pub fn game_summary(&self) -> String {
+        let mut output: String = String::from("Simulation Complete: \n");
+        output = format!("{}Name                 Kills   Died    \n", output);
+        output = format!("{}-------------------------------------\n", output);
+        for item in self.tribute_vec.iter() {
+            let mut died = item.deathday.to_string();
+            if died == "0".to_string() {
+                died = "Survivor".to_string();
+            }
+            output = format!("{}{:20} {:7} {:7}\n", output,
+                item.name, item.killcount.to_string(), died);
         }
         output
     }
