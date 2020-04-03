@@ -9,6 +9,7 @@ extern crate rand;
 mod tribute;
 mod roster;
 mod game;
+mod img;
 
 use std::io;
 use std::fs;
@@ -255,7 +256,7 @@ fn create_roster_from_files(game_roster: &mut roster::Roster) -> i32 {
     status
 }
 
-fn main() {
+fn run_interactive() {
     let mut number = 0;
     let mut game_roster: roster::Roster = roster::Roster::new();
     loop {
@@ -285,4 +286,61 @@ fn main() {
 
         number = parse_choice();
     }
+}
+
+fn main() {
+    // By default, run from file
+    let datadir = find_data_directory();
+    let mut game_abs_pathbuf = datadir.join("game.json");
+    if ! game_abs_pathbuf.exists() {
+        println!("game file doesn't exist! PANIC");
+    }
+
+    // now read as json
+    let game_data = fs::read_to_string(game_abs_pathbuf)
+        .expect("Something went wrong reading the file");
+
+    let mut v: Value = Value::Null;
+    match serde_json::from_str(game_data.as_str()) {
+        Ok(result) => v = result,
+        Err(e) => println!("Error {}", e)
+    }
+
+    // TODO move into its own class
+    let lconsole: u64 = v["io"]["lconsole"].as_u64().unwrap();
+    let lfile: u64 = v["io"]["lfile"].as_u64().unwrap();
+    let limages: u64 = v["io"]["limages"].as_u64().unwrap();
+
+    let mut game_roster: roster::Roster = roster::Roster::new();
+
+    let mut roster_abs_pathbuf = datadir.join("roster.json");
+    if ! roster_abs_pathbuf.exists() {
+        println!("default file doesn't exist! PANIC");
+    }
+
+    // now read as json
+    let roster_data = fs::read_to_string(roster_abs_pathbuf)
+        .expect("Something went wrong reading the file");
+
+    let mut v: Value = Value::Null;
+    match serde_json::from_str(roster_data.as_str()) {
+        Ok(result) => v = result,
+        Err(e) => println!("Error {}", e)
+    }
+
+    // now read v for number of tributes
+    let number_of_tributes = v["number_of_tributes"].as_i64().unwrap();
+
+    println!("{}", number_of_tributes);
+
+    // the tributes should now be accessed correctly 
+    for i in 1..number_of_tributes+1 {
+        let test_tribute = tribute::Tribute::from_data(
+            v[format!("{}", i)]["name"].as_str().unwrap(),
+            v[format!("{}", i)]["gender"].as_str().unwrap());
+        game_roster.add_tribute(Box::new(test_tribute));
+    }
+
+    let status = game::gameloop(&mut game_roster);
+    
 }

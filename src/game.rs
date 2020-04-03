@@ -4,8 +4,10 @@ use rand::Rng;
 use rand::seq::SliceRandom;
 use serde_json::{Value, Map, json};
 use tinytemplate::TinyTemplate;
+use std::process; // temporary
 
 use super::roster;
+use super::img;
 
 #[derive(PartialEq)]
 enum RoundType {
@@ -58,6 +60,7 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
         Ok(result) => events = result,
         Err(e) => println!("Error {}", e)
     }
+    // let mut eventlog
 
     loop {
         let mut tt = TinyTemplate::new();
@@ -242,27 +245,33 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
                 Err(e) => println!("template error.\n {}", e)
             }
 
-            //println!("action number: {}", action_number);
-            //println!("message: {}", action["msg"].as_str().unwrap());
+            // println!("action number: {}", action_number);
+            // println!("message: {}", action["msg"].as_str().unwrap());
 
             let context_map: Map<String, Value> = (0..action_number)
                 .map(|i| (i.to_string(), game_roster.serialize_tribute(action_members[i]).into()))
                 .collect::<Map<String, Value>>();
 
-            //println!("CONTEXT MAP");
-            //for (key, val) in context_map.iter() {
+            // println!("CONTEXT MAP");
+            // for (key, val) in context_map.iter() {
             //    println!("{}: {}", key, val)
-            //}
+            // }
 
             let rendered = tt.render("msg_tmp", &context_map);
 
+
+
             match rendered {
-                Ok(r) => println!("{}", r),
+                Ok(r) => {
+                    println!("{}", r);
+                    img::image(r);
+                }
                 Err(e) => println!("rendering error.\n {}", e)
             }
+
+                       
             
-            
-            
+            // process::exit(0x0000)
 
         }
 
