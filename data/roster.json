@@ -2,18 +2,22 @@
     "number_of_tributes": 4,
     "1": {
         "name": "John",
-        "gender": "M"
+        "gender": "M",
+        "avatar": "avatar1.png"
     },
     "2": {
        "name": "Dan",
-       "gender": "M"
+       "gender": "M",
+       "avatar": "avatar2.png"
     },
     "3": {
         "name": "Anne",
-        "gender": "F"
+        "gender": "F",
+        "avatar": "avatar3.jpg"
     },
     "4": {
         "name": "Emma",
-        "gender": "F"
+        "gender": "F",
+        "avatar": "avatar4.gif"
     }
 }

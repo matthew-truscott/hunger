@@ -1,438 +1,437 @@
 {
-
     "bloodbath": {
         "title": "The Bloodbath",
         "description": "As the tributes stand on their podiums, the horn sounds.",
         "color": "0x9f0000",
         "nonfatal": [
             {
-                "msg": "{0} grabs a shovel.",
+                "msg": "{0.name} grabs a shovel.",
                 "tributes": 1
             },
             {
-                "msg": "{0} grabs a backpack and retreats.",
+                "msg": "{0.name} grabs a backpack and retreats.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} fight for a bag. {0} gives up and retreats.",
+                "msg": "{0.name} and {1.name} fight for a bag. {0.name} gives up and retreats.",
                 "tributes": 2
             },
             {
-                "msg": "{0} and {1} fight for a bag. {1} gives up and retreats.",
+                "msg": "{0.name} and {1.name} fight for a bag. {1.name} gives up and retreats.",
                 "tributes": 2
             },
             {
-                "msg": "{0} finds a bow, some arrows, and a quiver.",
+                "msg": "{0.name} finds a bow, some arrows, and a quiver.",
                 "tributes": 1
             },
             {
-                "msg": "{0} runs into the Cornucopia and hides.",
+                "msg": "{0.name} runs into the Cornucopia and hides.",
                 "tributes": 1
             },
             {
-                "msg": "{0} takes a handful of throwing knives.",
+                "msg": "{0.name} takes a handful of throwing knives.",
                 "tributes": 1
             },
             {
-                "msg": "{0} rips a mace out of {1}'s hands",
+                "msg": "{0.name} rips a mace out of {1.name}'s hands",
                 "tributes": 2
             },
             {
-                "msg": "{0} finds a canteen full of water.",
+                "msg": "{0.name} finds a canteen full of water.",
                 "tributes": 1
             },
             {
-                "msg": "{0} stays at the Cornucopia for resources.",
+                "msg": "{0.name} stays at the Cornucopia for resources.",
                 "tributes": 1
             },
             {
-                "msg": "{0} gathers as much food as {{ if 1 }}he{{ else }}she{{ endif }} can.",
+                "msg": "{0.name} gathers as much food as {0.genN} can.",
                 "tributes": 1
             },
             {
-                "msg": "{0} grabs a sword.",
+                "msg": "{0.name} grabs a sword.",
                 "tributes": 1
             },
             {
-                "msg": "{0} takes a spear from inside the Cornucopia.",
+                "msg": "{0.name} takes a spear from inside the Cornucopia.",
                 "tributes": 1
             },
             {
-                "msg": "{0} finds a bag full of explosives.",
+                "msg": "{0.name} finds a bag full of explosives.",
                 "tributes": 1
             },
             {
-                "msg": "{0} clutches a first aid kit and runs away.",
+                "msg": "{0.name} clutches a first aid kit and runs away.",
                 "tributes": 1
             },
             {
-                "msg": "{0} takes a sickle from inside the Cornucopia.",
+                "msg": "{0.name} takes a sickle from inside the Cornucopia.",
                 "tributes": 1
             },
             {
-                "msg": "{0}, {1}, and {2} work together to get as many supplies as possible.",
+                "msg": "{0.name}, {1.name}, and {2.name} work together to get as many supplies as possible.",
                 "tributes": 3
             },
             {
-                "msg": "{0} runs away with a lighter and some rope.",
+                "msg": "{0.name} runs away with a lighter and some rope.",
                 "tributes": 1
             },
             {
-                "msg": "{0} snatches a bottle of alcohol and a rag.",
+                "msg": "{0.name} snatches a bottle of alcohol and a rag.",
                 "tributes": 1
             },
             {
-                "msg": "{0} finds a backpack full of camping equipment.",
+                "msg": "{0.name} finds a backpack full of camping equipment.",
                 "tributes": 1
             },
             {
-                "msg": "{0} grabs a backpack, not realizing it is empty.",
+                "msg": "{0.name} grabs a backpack, not realizing it is empty.",
                 "tributes": 1
             },
             {
-                "msg": "{0} breaks {1}'s nose for a basket of bread.",
+                "msg": "{0.name} breaks {1.name}'s nose for a basket of bread.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} share everything they gathered before running.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} share everything they gathered before running.",
                 "tributes": 4
             },
             {
-                "msg": "{0} receives a trident from inside the Cornucopia.",
+                "msg": "{0.name} receives a trident from inside the Cornucopia.",
                 "tributes": 1
             },
             {
-                "msg": "{0} grabs a jar of fishing bait while {1} gets fishing gear.",
+                "msg": "{0.name} grabs a jar of fishing bait while {1.name} gets fishing gear.",
                 "tributes": 2
             },
             {
-                "msg": "{0} scares {1} away from the Cornucopia.",
+                "msg": "{0.name} scares {1.name} away from the Cornucopia.",
                 "tributes": 2
             },
             {
-                "msg": "{0} grabs a shield leaning on the Cornucopia.",
+                "msg": "{0.name} grabs a shield leaning on the Cornucopia.",
                 "tributes": 1
             },
             {
-                "msg": "{0} snatches a pair of sais.",
+                "msg": "{0.name} snatches a pair of sais.",
                 "tributes": 1
             }
         ],
         "fatal": [
             {
-                "msg": "{0} steps off {{ if 1 }}his{{ else }}her{{ endif }} podium too soon and blows up.",
+                "msg": "{0.name} steps off {0.genG} podium too soon and blows up.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} throws a knife into {1}'s head.",
+                "msg": "{0.name} throws a knife into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} accidentally steps on a landmine.",
+                "msg": "{0.name} accidentally steps on a landmine.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} catches {1} off guard and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} catches {1.name} off guard and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} work together to drown {2}.",
+                "msg": "{0.name} and {1.name} work together to drown {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} strangles {1} after engaging in a fist fight.",
+                "msg": "{0.name} strangles {1.name} after engaging in a fist fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow into {1}'s head.",
+                "msg": "{0.name} shoots an arrow into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} cannot handle the circumstances and commits suicide.",
+                "msg": "{0.name} cannot handle the circumstances and commits suicide.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} bashes {1}'s head against a rock several times.",
+                "msg": "{0.name} bashes {1.name}'s head against a rock several times.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} snaps {1}'s neck.",
+                "msg": "{0.name} snaps {1.name}'s neck.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} decapitates {1} with a sword.",
+                "msg": "{0.name} decapitates {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} spears {1} in the abdomen.",
+                "msg": "{0.name} spears {1.name} in the abdomen.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets {1} on fire with a molotov.",
+                "msg": "{0.name} sets {1.name} on fire with a molotov.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a pit and dies.",
+                "msg": "{0.name} falls into a pit and dies.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} stabs {1} while {{ if 3  }}his{{ else }}her{{ endif }} back is turned.",
+                "msg": "{0.name} stabs {1.name} while {1.genG} back is turned.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1}, but puts {{ if 3 }}him{{ else }}her{{ endif }} out of {{ if 3  }}his{{ else }}her{{ endif }} misery.",
+                "msg": "{0.name} severely injures {1.name}, but puts {1.genA} out of {1.genG} misery.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} to die.",
+                "msg": "{0.name} severely injures {1.name} and leaves {1.genA} to die.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bashes {1}'s head in with a mace.",
+                "msg": "{0.name} bashes {1.name}'s head in with a mace.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} pushes {1} off a cliff during a knife fight.",
+                "msg": "{0.name} pushes {1.name} off a cliff during a knife fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s chest.",
+                "msg": "{0.name} throws a knife into {1.name}'s chest.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} is unable to convince {1} to not kill {{ if 2 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} is unable to convince {1.name} to not kill {0.genA}.",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} convinces {1} not to kill {{ if 2 }}him{{ else }}her{{ endif }}, only to kill {{ if 3 }}him{{ else }}her{{ endif }} instead.",
+                "msg": "{0.name} convinces {1.name} not to kill {0.genA}, only to kill {1.genA} instead.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a frozen lake and drowns.",
+                "msg": "{0.name} falls into a frozen lake and drowns.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0}, {1}, and {2} start fighting, but {1} runs away as {0} kills {2}.",
+                "msg": "{0.name}, {1.name}, and {2.name} start fighting, but {1.name} runs away as {0.name} kills {2.name}.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} kills {1} with {{ if 3  }}his{{ else }}her{{ endif }} own weapon.",
+                "msg": "{0.name} kills {1.name} with {1.genG} own weapon.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} overpowers {1}, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} overpowers {1.name}, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1} and {2}",
+                "msg": "{0.name} sets an explosive off, killing {1.name} and {2.name}",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, and {3}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, and {3.name}.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1, 2, 3]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, {3}, and {4}",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, {3.name}, and {4.name}",
                 "tributes": 5,
                 "killer": [0],
                 "killed": [1, 2, 3, 4]
             },
             {
-                "msg": "{0} kills {1} as {{ if 3  }}he{{ else }}she{{ endif }} tries to run.",
+                "msg": "{0.name} kills {1.name} as {1.genN} tries to run.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} threaten a double suicide. It fails and they die.",
+                "msg": "{0.name} and {1.name} threaten a double suicide. It fails and they die.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} form a suicide pact, killing themselves.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} form a suicide pact, killing themselves.",
                 "tributes": 4,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1, 2, 3]
             },
             {
-                "msg": "{0} kills {1} with a hatchet.",
+                "msg": "{0.name} kills {1.name} with a hatchet.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {0} and {1} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {0.name} and {1.name} survive.",
                 "tributes": 4,
                 "killer": [0, 1],
                 "killed": [2, 3]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {2} and {3} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {2.name} and {3.name} survive.",
                 "tributes": 4,
                 "killer": [2, 3],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} attacks {1}, but {2} protects {{ if 3 }}him{{ else }}her{{ endif }}, killing {0}",
+                "msg": "{0.name} attacks {1.name}, but {2.name} protects {1.genA}, killing {0.name}",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0]
             },
             {
-                "msg": "{0} severely slices {1} with a sword.",
+                "msg": "{0.name} severely slices {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} strangles {1} with a rope",
+                "msg": "{0.name} strangles {1.name} with a rope",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} for {{ if 3 }}his{{ else }}her{{ endif }} supplies.",
+                "msg": "{0.name} kills {1.name} for {1.genG} supplies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow at {1}, but misses and kills {2} instead",
+                "msg": "{0.name} shoots an arrow at {1.name}, but misses and kills {2.name} instead",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} shoots a poisonous blow dart into {1}'s neck, slowly killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} shoots a poisonous blow dart into {1.name}'s neck, slowly killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} stabs {1} wth a tree branch.",
+                "msg": "{0.name} stabs {1.name} wth a tree branch.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} stabs {1} in the back with a trident.",
+                "msg": "{0.name} stabs {1.name} in the back with a trident.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {0} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {0.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {1} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {1.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [1],
                 "killed": [0, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {2} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {2.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} finds {1} hiding in the Cornucopia and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} finds {1.name} hiding in the Cornucopia and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} finds {1} hiding in the Cornucopia, but {1} kills {{ if 2 }}him{{ else }}her{{ endif }}",
+                "msg": "{0.name} finds {1.name} hiding in the Cornucopia, but {1.name} kills {0.genA}",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} kills {1} with a sickle.",
+                "msg": "{0.name} kills {1.name} with a sickle.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight for a bag. {0} strangles {1} with the straps and runs.",
+                "msg": "{0.name} and {1.name} fight for a bag. {0.name} strangles {1.name} with the straps and runs.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight for a bag. {1} strangles {0} with the straps and runs.",
+                "msg": "{0.name} and {1.name} fight for a bag. {1.name} strangles {0.name} with the straps and runs.",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} repeatedly stabs {1} to death with sais.",
+                "msg": "{0.name} repeatedly stabs {1.name} to death with sais.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
@@ -442,651 +441,651 @@
 
     "day": {
         "title": "Day {0}",
-        "description": [-1],
+        "description": [],
         "color": "0xf9eb0f",
         "nonfatal": [
             {
-                "msg": "{0} goes hunting.",
+                "msg": "{0.name} goes hunting.",
                 "tributes": 1
             },
             {
-                "msg": "{0} injures {{ if 1 }}himself{{ else }}herself{{ endif }}",
+                "msg": "{0.name} injures {0.genS}",
                 "tributes": 1
             },
             {
-                "msg": "{0} explores the arena.",
+                "msg": "{0.name} explores the arena.",
                 "tributes": 1
             },
             {
-                "msg": "{0} scares {1} off.",
+                "msg": "{0.name} scares {1.name} off.",
                 "tributes": 2
             },
             {
-                "msg": "{0} diverts {1}'s attention and runs away.",
+                "msg": "{0.name} diverts {1.name}'s attention and runs away.",
                 "tributes": 2
             },
             {
-                "msg": "{0} stalks {1}.",
+                "msg": "{0.name} stalks {1.name}.",
                 "tributes": 2
             },
             {
-                "msg": "{0} fishes.",
+                "msg": "{0.name} fishes.",
                 "tributes": 1
             },
             {
-                "msg": "{0} camouflages {{ if 1 }}himself{{ else }}herself{{ endif }} in the bushes.",
+                "msg": "{0.name} camouflages {0.genS} in the bushes.",
                 "tributes": 1
             },
             {
-                "msg": "{0} steals from {1} while {{ if 3  }}he{{ else }}she{{ endif }} isn't looking.",
+                "msg": "{0.name} steals from {1.name} while {1.genN} isn't looking.",
                 "tributes": 2
             },
             {
-                "msg": "{0} makes a wooden spear.",
+                "msg": "{0.name} makes a wooden spear.",
                 "tributes": 1
             },
             {
-                "msg": "{0} discovers a cave.",
+                "msg": "{0.name} discovers a cave.",
                 "tributes": 1
             },
             {
-                "msg": "{0} attacks {1}, but {{ if 3  }}he{{ else }}she{{ endif }} manages to escape.",
+                "msg": "{0.name} attacks {1.name}, but {1.genN} manages to escape.",
                 "tributes": 2
             },
             {
-                "msg": "{0} chases {1}.",
+                "msg": "{0.name} chases {1.name}.",
                 "tributes": 2
             },
             {
-                "msg": "{0} runs away from {1}.",
+                "msg": "{0.name} runs away from {1.name}.",
                 "tributes": 2
             },
             {
-                "msg": "{0} collects fruit from a tree.",
+                "msg": "{0.name} collects fruit from a tree.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives a hatchet from an unknown sponsor.",
+                "msg": "{0.name} receives a hatchet from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives clean water from an unknown sponsor.",
+                "msg": "{0.name} receives clean water from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives medical supplies from an unknown sponsor.",
+                "msg": "{0.name} receives medical supplies from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives fresh food from an unknown sponsor.",
+                "msg": "{0.name} receives fresh food from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} searches for a water source.",
+                "msg": "{0.name} searches for a water source.",
                 "tributes": 1
             },
             {
-                "msg": "{0} defeats {1} in a fight, but spares {{ if 3  }}his{{ else }}her{{ endif }} life.",
+                "msg": "{0.name} defeats {1.name} in a fight, but spares {1.genG} life.",
                 "tributes": 2
             },
             {
-                "msg": "{0} and {1} work together for the day.",
+                "msg": "{0.name} and {1.name} work together for the day.",
                 "tributes": 2
             },
             {
-                "msg": "{0} begs for {1} to kill {{ if 2 }}him{{ else }}her{{ endif }}. {{ if 2 }}he{{ else }}she{{ endif }} refuses, keeping {0} alive.",
+                "msg": "{0.name} begs for {1.name} to kill {0.genA}. {1.genN} refuses, keeping {0.name} alive.",
                 "tributes": 2
             },
             {
-                "msg": "{0} tries to sleep through the entire day.",
+                "msg": "{0.name} tries to sleep through the entire day.",
                 "tributes": 1
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} raid {4}'s camp while {4.he_she} is hunting.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} raid {4.name}'s camp while {4.genN} is hunting.",
                 "tributes": 5
             },
             {
-                "msg": "{0} constructs a shack.",
+                "msg": "{0.name} constructs a shack.",
                 "tributes": 1
             },
             {
-                "msg": "{0} overhears {1} and {2} talking in the distance.",
+                "msg": "{0.name} overhears {1.name} and {2.name} talking in the distance.",
                 "tributes": 3
             },
             {
-                "msg": "{0} practices {{ if 1 }}his{{ else }}her{{ endif }} archery.",
+                "msg": "{0.name} practices {0.genG} archery.",
                 "tributes": 1
             },
             {
-                "msg": "{0} thinks about home.",
+                "msg": "{0.name} thinks about home.",
                 "tributes": 1
             },
             {
-                "msg": "{0} is pricked by thorns while picking berries.",
+                "msg": "{0.name} is pricked by thorns while picking berries.",
                 "tributes": 1
             },
             {
-                "msg": "{0} tries to spear fish with a trident.",
+                "msg": "{0.name} tries to spear fish with a trident.",
                 "tributes": 1
             },
             {
-                "msg": "{0} searches for firewood.",
+                "msg": "{0.name} searches for firewood.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} split up to search for resources.",
+                "msg": "{0.name} and {1.name} split up to search for resources.",
                 "tributes": 2
             },
             {
-                "msg": "{0} picks flowers.",
+                "msg": "{0.name} picks flowers.",
                 "tributes": 1
             },
             {
-                "msg": "{0} tends to {1}'s wounds.",
+                "msg": "{0.name} tends to {1.name}'s wounds.",
                 "tributes": 2
             },
             {
-                "msg": "{0} sees smoke rising in the distance, but decides not to investigate.",
+                "msg": "{0.name} sees smoke rising in the distance, but decides not to investigate.",
                 "tributes": 1
             },
             {
-                "msg": "{0} sprains {{ if 2 }}his{{ else }}her{{ endif }} ankle while running away from {1}.",
+                "msg": "{0.name} sprains {0.genG} ankle while running away from {1.name}.",
                 "tributes": 2
             },
             {
-                "msg": "{0} makes a slingshot.",
+                "msg": "{0.name} makes a slingshot.",
                 "tributes": 1
             },
             {
-                "msg": "{0} travels to higher ground.",
+                "msg": "{0.name} travels to higher ground.",
                 "tributes": 1
             },
             {
-                "msg": "{0} discovers a river.",
+                "msg": "{0.name} discovers a river.",
                 "tributes": 1
             },
             {
-                "msg": "{0} hunts for other tributes.",
+                "msg": "{0.name} hunts for other tributes.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} hunt for other tributes.",
+                "msg": "{0.name} and {1.name} hunt for other tributes.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, and {2} hunt for other tributes.",
+                "msg": "{0.name}, {1.name}, and {2.name} hunt for other tributes.",
                 "tributes": 3
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} hunt for other tributes.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} hunt for other tributes.",
                 "tributes": 4
             },
             {
-                "msg": "{0}, {1}, {2}, {3}, and {4} hunt for other tributes.",
+                "msg": "{0.name}, {1.name}, {2.name}, {3.name}, and {4.name} hunt for other tributes.",
                 "tributes": 5
             },
             {
-                "msg": "{0} receives an explosive from an unknown sponsor.",
+                "msg": "{0.name} receives an explosive from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} questions {{ if 1 }}his{{ else }}her{{ endif }} sanity.",
+                "msg": "{0.name} questions {0.genG} sanity.",
                 "tributes": 1
             }
         ],
         "fatal": [
             {
-                "msg": "{0} catches {1} off guard and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} catches {1.name} off guard and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s head.",
+                "msg": "{0.name} throws a knife into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} begs for {1} to kill {{ if 2 }}him{{ else }}her{{ endif }}. {1} reluctantly obliges, killing {0}",
+                "msg": "{0.name} begs for {1.name} to kill {0.genA}. {1.name} reluctantly obliges, killing {0.name}",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} and {1} work together to drown {2}.",
+                "msg": "{0.name} and {1.name} work together to drown {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} strangles {1} after engaging in a fist fight.",
+                "msg": "{0.name} strangles {1.name} after engaging in a fist fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow into {1}'s head.",
+                "msg": "{0.name} shoots an arrow into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bleeds out due to untreated injuries.",
+                "msg": "{0.name} bleeds out due to untreated injuries.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} cannot handle the circumstances and commits suicide.",
+                "msg": "{0.name} cannot handle the circumstances and commits suicide.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} bashes {1}'s head against a rock several times.",
+                "msg": "{0.name} bashes {1.name}'s head against a rock several times.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} unknowingly eats toxic berries.",
+                "msg": "{0.name} unknowingly eats toxic berries.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} silently snaps {1}'s neck.",
+                "msg": "{0.name} silently snaps {1.name}'s neck.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} taints {1}'s food, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} taints {1.name}'s food, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} decapitates {1} with a sword.",
+                "msg": "{0.name} decapitates {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} dies from an infection.",
+                "msg": "{0.name} dies from an infection.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} spears {1} in the abdomen.",
+                "msg": "{0.name} spears {1.name} in the abdomen.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets {1} on fire with a molotov.",
+                "msg": "{0.name} sets {1.name} on fire with a molotov.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a pit and dies.",
+                "msg": "{0.name} falls into a pit and dies.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} stabs {1} while {{ if 3  }}his{{ else }}her{{ endif }} back is turned.",
+                "msg": "{0.name} stabs {1.name} while {1.genG} back is turned.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1}, but puts {{ if 3 }}him{{ else }}her{{ endif }} out of {{ if 3  }}his{{ else }}her{{ endif }} misery.",
+                "msg": "{0.name} severely injures {1.name}, but puts {1.genA} out of {1.genG} misery.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} to die.",
+                "msg": "{0.name} severely injures {1.name} and leaves {1.genA} to die.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bashes {1}'s head in with a mace.",
+                "msg": "{0.name} bashes {1.name}'s head in with a mace.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} attempts to climb a tree, but falls to {{ if 1 }}his{{ else }}her{{ endif }} death.",
+                "msg": "{0.name} attempts to climb a tree, but falls to {0.genG} death.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} pushes {1} off a cliff during a knife fight.",
+                "msg": "{0.name} pushes {1.name} off a cliff during a knife fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s chest.",
+                "msg": "{0.name} throws a knife into {1.name}'s chest.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}'s trap kills {1}",
+                "msg": "{0.name}'s trap kills {1.name}",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} while {{ if 3  }}he{{ else }}she{{ endif }} is resting.",
+                "msg": "{0.name} kills {1.name} while {1.genN} is resting.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} is unable to convince {1} to not kill {{ if 2 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} is unable to convince {1.name} to not kill {0.genA}.",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} convinces {1} not to kill {{ if 2 }}him{{ else }}her{{ endif }}, only to kill {{ if 3 }}him{{ else }}her{{ endif }} instead.",
+                "msg": "{0.name} convinces {1.name} not to kill {0.genA}, only to kill {1.genA} instead.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a frozen lake and drowns.",
+                "msg": "{0.name} falls into a frozen lake and drowns.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0}, {1}, and {2} start fighting, but {1} runs away as {0} kills {2}.",
+                "msg": "{0.name}, {1.name}, and {2.name} start fighting, but {1.name} runs away as {0.name} kills {2.name}.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} kills {1} with {{ if 3  }}his{{ else }}her{{ endif }} own weapon.",
+                "msg": "{0.name} kills {1.name} with {1.genG} own weapon.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} overpowers {1}, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} overpowers {1.name}, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1} and {2}",
+                "msg": "{0.name} sets an explosive off, killing {1.name} and {2.name}",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, and {3}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, and {3.name}.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1, 2, 3]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, {3}, and {4}",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, {3.name}, and {4.name}",
                 "tributes": 5,
                 "killer": [0],
                 "killed": [1, 2, 3, 4]
             },
             {
-                "msg": "{0} kills {1} as {{ if 3  }}he{{ else }}she{{ endif }} tries to run.",
+                "msg": "{0.name} kills {1.name} as {1.genN} tries to run.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} threaten a double suicide. It fails and they die.",
+                "msg": "{0.name} and {1.name} threaten a double suicide. It fails and they die.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} form a suicide pact, killing themselves.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} form a suicide pact, killing themselves.",
                 "tributes": 4,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1, 2, 3]
             },
             {
-                "msg": "{0} dies from hypothermia.",
+                "msg": "{0.name} dies from hypothermia.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies from hunger.",
+                "msg": "{0.name} dies from hunger.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies from thirst.",
+                "msg": "{0.name} dies from thirst.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} kills {1} with a hatchet.",
+                "msg": "{0.name} kills {1.name} with a hatchet.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {0} and {1} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {0.name} and {1.name} survive.",
                 "tributes": 4,
                 "killer": [0, 1],
                 "killed": [2, 3]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {2} and {3} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {2.name} and {3.name} survive.",
                 "tributes": 4,
                 "killer": [2, 3],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} dies trying to escape the arena.",
+                "msg": "{0.name} dies trying to escape the arena.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies of dysentery.",
+                "msg": "{0.name} dies of dysentery.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} accidentally detonates a land mine while trying to arm it.",
+                "msg": "{0.name} accidentally detonates a land mine while trying to arm it.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} attacks {1}, but {2} protects {{ if 4 }}him{{ else }}her{{ endif }}, killing {0}",
+                "msg": "{0.name} attacks {1.name}, but {2.name} protects {1.genA}, killing {0.name}",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0]
             },
             {
-                "msg": "{0} ambushes {1} and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} ambushes {1.name} and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} accidentally steps on a landmine.",
+                "msg": "{0.name} accidentally steps on a landmine.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} severely slices {1} with a sword.",
+                "msg": "{0.name} severely slices {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} strangles {1} with a rope",
+                "msg": "{0.name} strangles {1.name} with a rope",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} for {{ if 3  }}his{{ else }}her{{ endif }} supplies.",
+                "msg": "{0.name} kills {1.name} for {1.genG} supplies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow at {1}, but misses and kills {2} instead",
+                "msg": "{0.name} shoots an arrow at {1.name}, but misses and kills {2.name} instead",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} shoots a poisonous blow dart into {1}'s neck, slowly killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} shoots a poisonous blow dart into {1.name}'s neck, slowly killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, and {2} successfully ambush and kill {3}, {4}, and {5}.",
+                "msg": "{0.name}, {1.name}, and {2.name} successfully ambush and kill {3.name}, {4.name}, and {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2],
                 "killed": [3, 4, 5]
             },
             {
-                "msg": "{0}, {1}, and {2} unsuccessfully ambush {3}, {4}, and {5}, who kill them instead.",
+                "msg": "{0.name}, {1.name}, and {2.name} unsuccessfully ambush {3.name}, {4.name}, and {5.name}, who kill them instead.",
                 "tributes": 6,
                 "killer": [3, 4, 5],
                 "killed": [0, 1, 2]
             },
             {
-                "msg": "{0} stabs {1} wth a tree branch.",
+                "msg": "{0.name} stabs {1.name} wth a tree branch.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} decides to kill {2}.",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} decides to kill {2.name}.",
                 "tributes": 4,
                 "killer": [1],
                 "killed": [2]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} decides to kill {3}.",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} decides to kill {3.name}.",
                 "tributes": 4,
                 "killer": [1],
                 "killed": [3]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} refuses to kill, so {0} kills {{ if 5 }}him{{ else }}her{{ endif }} instead.",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} refuses to kill, so {0.name} kills {1.genA} instead.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} poisons {1}'s drink, but mistakes it for {{ if 2 }}his{{ else }}her{{ endif }} own and dies.",
+                "msg": "{0.name} poisons {1.name}'s drink, but mistakes it for {0.genG} own and dies.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} poisons {1}'s drink. {{ if 3 }}he{{ else }}she{{ endif }} drinks it and dies.",
+                "msg": "{0.name} poisons {1.name}'s drink. {1.genN} drinks it and dies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} stabs {1} in the back with a trident.",
+                "msg": "{0.name} stabs {1.name} in the back with a trident.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} attempts to climb a tree, but falls on {1}, killing them both.",
+                "msg": "{0.name} attempts to climb a tree, but falls on {1.name}, killing them both.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {0} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {0.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {1} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {1.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [1],
                 "killed": [0, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {2} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {2.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} kills {1} with a sickle.",
+                "msg": "{0.name} kills {1.name} with a sickle.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, {2}, {3}, and {4} track down and kill {5}.",
+                "msg": "{0.name}, {1.name}, {2.name}, {3.name}, and {4.name} track down and kill {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2, 3, 4],
                 "killed": [5]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} track down and kill {4}.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} track down and kill {4.name}.",
                 "tributes": 5,
                 "killer": [0, 1, 2, 3],
                 "killed": [4]
             },
             {
-                "msg": "{0}, {1}, and {2} track down and kill {3}.",
+                "msg": "{0.name}, {1.name}, and {2.name} track down and kill {3.name}.",
                 "tributes": 4,
                 "killer": [0, 1, 2],
                 "killed": [3]
             },
             {
-                "msg": "{0} and {1} track down and kill {2}.",
+                "msg": "{0.name} and {1.name} track down and kill {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} tracks down and kills {1}.",
+                "msg": "{0.name} tracks down and kills {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} repeatedly stabs {1} to death with sais.",
+                "msg": "{0.name} repeatedly stabs {1.name} to death with sais.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
@@ -1096,647 +1095,647 @@
 
     "night": {
         "title": "Night {0}",
-        "description": [-1],
+        "description": "",
         "color": "0x001233",
         "nonfatal": [
             {
-                "msg": "{0} starts a fire.",
+                "msg": "{0.name} starts a fire.",
                 "tributes": 1
             },
             {
-                "msg": "{0} sets up camp for the night.",
+                "msg": "{0.name} sets up camp for the night.",
                 "tributes": 1
             },
             {
-                "msg": "{0} loses sight of where {{ if 1 }}he{{ else }}she{{ endif }} is.",
+                "msg": "{0.name} loses sight of where {0.genN} is.",
                 "tributes": 1
             },
             {
-                "msg": "{0} climbs a tree to rest.",
+                "msg": "{0.name} climbs a tree to rest.",
                 "tributes": 1
             },
             {
-                "msg": "{0} goes to sleep.",
+                "msg": "{0.name} goes to sleep.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} tell stories about themselves to each other.",
+                "msg": "{0.name} and {1.name} tell stories about themselves to each other.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} sleep in shifts.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} sleep in shifts.",
                 "tributes": 4
             },
             {
-                "msg": "{0}, {1}, and {2} sleep in shifts.",
+                "msg": "{0.name}, {1.name}, and {2.name} sleep in shifts.",
                 "tributes": 3
             },
             {
-                "msg": "{0} and {1} sleep in shifts.",
+                "msg": "{0.name} and {1.name} sleep in shifts.",
                 "tributes": 2
             },
             {
-                "msg": "{0} tends to {{ if 1 }}his{{ else }}her{{ endif }} wounds.",
+                "msg": "{0.name} tends to {0.genG} wounds.",
                 "tributes": 1
             },
             {
-                "msg": "{0} sees a fire, but stays hidden.",
+                "msg": "{0.name} sees a fire, but stays hidden.",
                 "tributes": 1
             },
             {
-                "msg": "{0} screams for help.",
+                "msg": "{0.name} screams for help.",
                 "tributes": 1
             },
             {
-                "msg": "{0} stays awake all night.",
+                "msg": "{0.name} stays awake all night.",
                 "tributes": 1
             },
             {
-                "msg": "{0} passes out from exhaustion.",
+                "msg": "{0.name} passes out from exhaustion.",
                 "tributes": 1
             },
             {
-                "msg": "{0} cooks {{ if 1 }}his{{ else }}her{{ endif }} food before putting {{ if 1 }}his{{ else }}her{{ endif }} fire out.",
+                "msg": "{0.name} cooks {0.genG} food before putting {0.genG} fire out.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} run into each other and decide to truce for the night.",
+                "msg": "{0.name} and {1.name} run into each other and decide to truce for the night.",
                 "tributes": 2
             },
             {
-                "msg": "{0} fends {1}, {2}, and {3} away from {{ if 4 }}his{{ else }}her{{ endif }} fire.",
+                "msg": "{0.name} fends {1.name}, {2.name}, and {3.name} away from {0.genG} fire.",
                 "tributes": 4
             },
             {
-                "msg": "{0}, {1}, and {2} discuss the games and what might happen in the morning.",
+                "msg": "{0.name}, {1.name}, and {2.name} discuss the games and what might happen in the morning.",
                 "tributes": 3
             },
             {
-                "msg": "{0} cries {{ if 1 }}himself{{ else }}herself{{ endif }} to sleep.",
+                "msg": "{0.name} cries {0.genS} to sleep.",
                 "tributes": 1
             },
             {
-                "msg": "{0} tries to treat {{ if 1 }}his{{ else }}her{{ endif }} infection.",
+                "msg": "{0.name} tries to treat {0.genG} infection.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} talk about the tributes still alive.",
+                "msg": "{0.name} and {1.name} talk about the tributes still alive.",
                 "tributes": 2
             },
             {
-                "msg": "{0} is awoken by nightmares.",
+                "msg": "{0.name} is awoken by nightmares.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} huddle for warmth.",
+                "msg": "{0.name} and {1.name} huddle for warmth.",
                 "tributes": 2
             },
             {
-                "msg": "{0} thinks about winning.",
+                "msg": "{0.name} thinks about winning.",
                 "tributes": 1
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} tell each other ghost stories to lighten the mood.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} tell each other ghost stories to lighten the mood.",
                 "tributes": 4
             },
             {
-                "msg": "{0} looks at the night sky.",
+                "msg": "{0.name} looks at the night sky.",
                 "tributes": 1
             },
             {
-                "msg": "{0} defeats {1} in a fight, but spares {{ if 3  }}his{{ else }}her{{ endif }} life.",
+                "msg": "{0.name} defeats {1.name} in a fight, but spares {1.genG} life.",
                 "tributes": 2
             },
             {
-                "msg": "{0} begs for {1} to kill {{ if 2 }}him{{ else }}her{{ endif }}. {{ if 3 }}he{{ else }}she{{ endif }} refuses, keeping {0} alive.",
+                "msg": "{0.name} begs for {1.name} to kill {0.genA}. {1.genN} refuses, keeping {0.name} alive.",
                 "tributes": 2
             },
             {
-                "msg": "{0} destroys {1}'s supplies while {{ if 3  }}he{{ else }}she{{ endif }} is asleep.",
+                "msg": "{0.name} destroys {1.name}'s supplies while {1.genN} is asleep.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, {2}, {3}, and {4} sleep in shifts.",
+                "msg": "{0.name}, {1.name}, {2.name}, {3.name}, and {4.name} sleep in shifts.",
                 "tributes": 5
             },
             {
-                "msg": "{0} lets {1} into {{ if 2 }}his{{ else }}her{{ endif }} shelter.",
+                "msg": "{0.name} lets {1.name} into {0.genG} shelter.",
                 "tributes": 2
             },
             {
-                "msg": "{0} receives a hatchet from an unknown sponsor.",
+                "msg": "{0.name} receives a hatchet from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives clean water from an unknown sponsor.",
+                "msg": "{0.name} receives clean water from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives medical supplies from an unknown sponsor.",
+                "msg": "{0.name} receives medical supplies from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} receives fresh food from an unknown sponsor.",
+                "msg": "{0.name} receives fresh food from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} tries to sing {{ if 1 }}himself{{ else }}herself{{ endif }} to sleep.",
+                "msg": "{0.name} tries to sing {0.genS} to sleep.",
                 "tributes": 1
             },
             {
-                "msg": "{0} attempts to start a fire, but is unsuccessful.",
+                "msg": "{0.name} attempts to start a fire, but is unsuccessful.",
                 "tributes": 1
             },
             {
-                "msg": "{0} thinks about home.",
+                "msg": "{0.name} thinks about home.",
                 "tributes": 1
             },
             {
-                "msg": "{0} tends to {1}'s wounds.",
+                "msg": "{0.name} tends to {1.name}'s wounds.",
                 "tributes": 2
             },
             {
-                "msg": "{0} quietly hums.",
+                "msg": "{0.name} quietly hums.",
                 "tributes": 1
             },
             {
-                "msg": "{0}, {1}, and {2} cheerfully sing songs together.",
+                "msg": "{0.name}, {1.name}, and {2.name} cheerfully sing songs together.",
                 "tributes": 3
             },
             {
-                "msg": "{0} is unable to start a fire and sleeps without warmth.",
+                "msg": "{0.name} is unable to start a fire and sleeps without warmth.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} hold hands.",
+                "msg": "{0.name} and {1.name} hold hands.",
                 "tributes": 2
             },
             {
-                "msg": "{0} convinces {1} to snuggle with {{ if 2 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} convinces {1.name} to snuggle with {0.genA}.",
                 "tributes": 2
             },
             {
-                "msg": "{0} receives an explosive from an unknown sponsor.",
+                "msg": "{0.name} receives an explosive from an unknown sponsor.",
                 "tributes": 1
             },
             {
-                "msg": "{0} questions {{ if 1 }}his{{ else }}her{{ endif }} sanity.",
+                "msg": "{0.name} questions {0.genG} sanity.",
                 "tributes": 1
             }
         ],
         "fatal": [
             {
-                "msg": "{0} catches {1} off guard and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} catches {1.name} off guard and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s head.",
+                "msg": "{0.name} throws a knife into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} begs for {1} to kill {{ if 2 }}him{{ else }}her{{ endif }}. {1} reluctantly obliges, killing {0}",
+                "msg": "{0.name} begs for {1.name} to kill {0.genA}. {1.name} reluctantly obliges, killing {0.name}",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} and {1} work together to drown {2}.",
+                "msg": "{0.name} and {1.name} work together to drown {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} strangles {1} after engaging in a fist fight.",
+                "msg": "{0.name} strangles {1.name} after engaging in a fist fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow into {1}'s head.",
+                "msg": "{0.name} shoots an arrow into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bleeds out due to untreated injuries.",
+                "msg": "{0.name} bleeds out due to untreated injuries.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} cannot handle the circumstances and commits suicide.",
+                "msg": "{0.name} cannot handle the circumstances and commits suicide.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} bashes {1}'s head against a rock several times.",
+                "msg": "{0.name} bashes {1.name}'s head against a rock several times.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} unknowingly eats toxic berries.",
+                "msg": "{0.name} unknowingly eats toxic berries.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} silently snaps {1}'s neck.",
+                "msg": "{0.name} silently snaps {1.name}'s neck.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} taints {1}'s food, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} taints {1.name}'s food, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} decapitates {1} with a sword.",
+                "msg": "{0.name} decapitates {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} dies from an infection.",
+                "msg": "{0.name} dies from an infection.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} spears {1} in the abdomen.",
+                "msg": "{0.name} spears {1.name} in the abdomen.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets {1} on fire with a molotov.",
+                "msg": "{0.name} sets {1.name} on fire with a molotov.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a pit and dies.",
+                "msg": "{0.name} falls into a pit and dies.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} stabs {1} while {{ if 3  }}his{{ else }}her{{ endif }} back is turned.",
+                "msg": "{0.name} stabs {1.name} while {1.genG} back is turned.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1}, but puts {{ if 3 }}him{{ else }}her{{ endif }} out of {{ if 3  }}his{{ else }}her{{ endif }} misery.",
+                "msg": "{0.name} severely injures {1.name}, but puts {1.genA} out of {1.genG} misery.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} to die.",
+                "msg": "{0.name} severely injures {1.name} and leaves {1.genA} to die.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bashes {1}'s head in with a mace.",
+                "msg": "{0.name} bashes {1.name}'s head in with a mace.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} attempts to climb a tree, but falls to {{ if 1 }}his{{ else }}her{{ endif }} death.",
+                "msg": "{0.name} attempts to climb a tree, but falls to {0.genG} death.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} pushes {1} off a cliff during a knife fight.",
+                "msg": "{0.name} pushes {1.name} off a cliff during a knife fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s chest.",
+                "msg": "{0.name} throws a knife into {1.name}'s chest.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}'s trap kills {1}",
+                "msg": "{0.name}'s trap kills {1.name}",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} while {{ if 3  }}he{{ else }}she{{ endif }} is sleeping.",
+                "msg": "{0.name} kills {1.name} while {1.genN} is sleeping.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} is unable to convince {1} to not kill {{ if 2 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} is unable to convince {1.name} to not kill {0.genA}.",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} convinces {1} not to kill {{ if 2 }}him{{ else }}her{{ endif }}, only to kill {{ if 3 }}him{{ else }}her{{ endif }} instead.",
+                "msg": "{0.name} convinces {1.name} not to kill {0.genA}, only to kill {1.genA} instead.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a frozen lake and drowns.",
+                "msg": "{0.name} falls into a frozen lake and drowns.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0}, {1}, and {2} start fighting, but {1} runs away as {0} kills {2}.",
+                "msg": "{0.name}, {1.name}, and {2.name} start fighting, but {1.name} runs away as {0.name} kills {2.name}.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} kills {1} with {{ if 3  }}his{{ else }}her{{ endif }} own weapon.",
+                "msg": "{0.name} kills {1.name} with {1.genG} own weapon.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} overpowers {1}, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} overpowers {1.name}, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1} and {2}",
+                "msg": "{0.name} sets an explosive off, killing {1.name} and {2.name}",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, and {3}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, and {3.name}.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1, 2, 3]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, {3}, and {4}",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, {3.name}, and {4.name}",
                 "tributes": 5,
                 "killer": [0],
                 "killed": [1, 2, 3, 4]
             },
             {
-                "msg": "{0} kills {1} as {{ if 3  }}he{{ else }}she{{ endif }} tries to run.",
+                "msg": "{0.name} kills {1.name} as {1.genN} tries to run.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} threaten a double suicide. It fails and they die.",
+                "msg": "{0.name} and {1.name} threaten a double suicide. It fails and they die.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} form a suicide pact, killing themselves.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} form a suicide pact, killing themselves.",
                 "tributes": 4,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1, 2, 3]
             },
             {
-                "msg": "{0} dies from hypothermia.",
+                "msg": "{0.name} dies from hypothermia.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies from hunger.",
+                "msg": "{0.name} dies from hunger.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies from thirst.",
+                "msg": "{0.name} dies from thirst.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} kills {1} with a hatchet.",
+                "msg": "{0.name} kills {1.name} with a hatchet.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {0} and {1} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {0.name} and {1.name} survive.",
                 "tributes": 4,
                 "killer": [0, 1],
                 "killed": [2, 3]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {2} and {3} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {2.name} and {3.name} survive.",
                 "tributes": 4,
                 "killer": [2, 3],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} dies trying to escape the arena.",
+                "msg": "{0.name} dies trying to escape the arena.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} dies of dysentery.",
+                "msg": "{0.name} dies of dysentery.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} accidentally detonates a land mine while trying to arm it.",
+                "msg": "{0.name} accidentally detonates a land mine while trying to arm it.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} attacks {1}, but {2} protects {{ if 4 }}him{{ else }}her{{ endif }}, killing {0}",
+                "msg": "{0.name} attacks {1.name}, but {2.name} protects {1.genA}, killing {0.name}",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0]
             },
             {
-                "msg": "{0} ambushes {1} and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} ambushes {1.name} and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} accidentally steps on a landmine.",
+                "msg": "{0.name} accidentally steps on a landmine.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} severely slices {1} with a sword.",
+                "msg": "{0.name} severely slices {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} strangles {1} with a rope",
+                "msg": "{0.name} strangles {1.name} with a rope",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} for {{ if 3  }}his{{ else }}her{{ endif }} supplies.",
+                "msg": "{0.name} kills {1.name} for {1.genG} supplies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow at {1}, but misses and kills {2} instead",
+                "msg": "{0.name} shoots an arrow at {1.name}, but misses and kills {2.name} instead",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} shoots a poisonous blow dart into {1}'s neck, slowly killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} shoots a poisonous blow dart into {1.name}'s neck, slowly killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, and {2} successfully ambush and kill {3}, {4}, and {5}.",
+                "msg": "{0.name}, {1.name}, and {2.name} successfully ambush and kill {3.name}, {4.name}, and {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2],
                 "killed": [3, 4, 5]
             },
             {
-                "msg": "{0}, {1}, and {2} unsuccessfully ambush {3}, {4}, and {5}, who kill them instead.",
+                "msg": "{0.name}, {1.name}, and {2.name} unsuccessfully ambush {3.name}, {4.name}, and {5.name}, who kill them instead.",
                 "tributes": 6,
                 "killer": [3, 4, 5],
                 "killed": [0, 1, 2]
             },
             {
-                "msg": "{0} stabs {1} wth a tree branch.",
+                "msg": "{0.name} stabs {1.name} wth a tree branch.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} decides to kill {2}.",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} decides to kill {2.name}.",
                 "tributes": 4,
                 "killer": [1],
                 "killed": [2]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} decides to kill {3}.",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} decides to kill {3.name}.",
                 "tributes": 4,
                 "killer": [1],
                 "killed": [3]
             },
             {
-                "msg": "{0} forces {1} to kill {2} or {3}. {{ if 5 }}he{{ else }}she{{ endif }} refuses to kill, so {0} kills {{ if 5 }}him{{ else }}her{{ endif }} instead",
+                "msg": "{0.name} forces {1.name} to kill {2.name} or {3.name}. {1.genN} refuses to kill, so {0.name} kills {1.genA} instead.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} poisons {1}'s drink, but mistakes it for {{ if 2 }}his{{ else }}her{{ endif }} own and dies.",
+                "msg": "{0.name} poisons {1.name}'s drink, but mistakes it for {0.genG} own and dies.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} poisons {1}'s drink. {{ if 3  }}he{{ else }}she{{ endif }} drinks it and dies.",
+                "msg": "{0.name} poisons {1.name}'s drink. {1.genN} drinks it and dies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} stabs {1} in the back with a trident.",
+                "msg": "{0.name} stabs {1.name} in the back with a trident.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} attempts to climb a tree, but falls on {1}, killing them both.",
+                "msg": "{0.name} attempts to climb a tree, but falls on {1.name}, killing them both.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {0} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {0.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {1} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {1.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [1],
                 "killed": [0, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {2} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {2.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} kills {1} with a sickle.",
+                "msg": "{0.name} kills {1.name} with a sickle.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, {2}, {3}, and {4} track down and kill {5}.",
+                "msg": "{0.name}, {1.name}, {2.name}, {3.name}, and {4.name} track down and kill {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2, 3, 4],
                 "killed": [5]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} track down and kill {4}.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} track down and kill {4.name}.",
                 "tributes": 5,
                 "killer": [0, 1, 2, 3],
                 "killed": [4]
             },
             {
-                "msg": "{0}, {1}, and {2} track down and kill {3}.",
+                "msg": "{0.name}, {1.name}, and {2.name} track down and kill {3.name}.",
                 "tributes": 4,
                 "killer": [0, 1, 2],
                 "killed": [3]
             },
             {
-                "msg": "{0} and {1} track down and kill {2}.",
+                "msg": "{0.name} and {1.name} track down and kill {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} tracks down and kills {1}.",
+                "msg": "{0.name} tracks down and kills {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} repeatedly stabs {1} to death with sais.",
+                "msg": "{0.name} repeatedly stabs {1.name} to death with sais.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
@@ -1750,397 +1749,397 @@
         "color": "0x39ea09",
         "nonfatal": [
             {
-                "msg": "{0} gathers as much food into a bag as {{ if 1 }}he{{ else }}she{{ endif }} can before fleeing.",
+                "msg": "{0.name} gathers as much food into a bag as {0.genN} can before fleeing.",
                 "tributes": 1
             },
             {
-                "msg": "{0} and {1} decide to work together to get more supplies.",
+                "msg": "{0.name} and {1.name} decide to work together to get more supplies.",
                 "tributes": 2
             },
             {
-                "msg": "{0} and {1} get into a fight over raw meat, but {1} gives up and runs away.",
+                "msg": "{0.name} and {1.name} get into a fight over raw meat, but {1.name} gives up and runs away.",
                 "tributes": 2
             },
             {
-                "msg": "{0} and {1} get into a fight over raw meat, but {0} gives up and runs away.",
+                "msg": "{0.name} and {1.name} get into a fight over raw meat, but {0.name} gives up and runs away.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, and {2} confront each other, but grab what they want slowly to avoid conflict.",
+                "msg": "{0.name}, {1.name}, and {2.name} confront each other, but grab what they want slowly to avoid conflict.",
                 "tributes": 3
             },
             {
-                "msg": "{0} destroys {1}'s memoirs out of spite.",
+                "msg": "{0.name} destroys {1.name}'s memoirs out of spite.",
                 "tributes": 2
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} team up to grab food, supplies, weapons, and memoirs.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} team up to grab food, supplies, weapons, and memoirs.",
                 "tributes": 4
             },
             {
-                "msg": "{0} steals {1}'s memoirs.",
+                "msg": "{0.name} steals {1.name}'s memoirs.",
                 "tributes": 2
             },
             {
-                "msg": "{0} takes a staff leaning against the Cornucopia.",
+                "msg": "{0.name} takes a staff leaning against the Cornucopia.",
                 "tributes": 1
             },
             {
-                "msg": "{0} stuffs a bundle of dry clothing into a backpack before sprinting away.",
+                "msg": "{0.name} stuffs a bundle of dry clothing into a backpack before sprinting away.",
                 "tributes": 1
             }
         ],
         "fatal": [
             {
-                "msg": "{0} throws a knife into {1}'s head.",
+                "msg": "{0.name} throws a knife into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} accidentally steps on a landmine.",
+                "msg": "{0.name} accidentally steps on a landmine.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} catches {1} off guard and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} catches {1.name} off guard and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} work together to drown {2}.",
+                "msg": "{0.name} and {1.name} work together to drown {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} strangles {1} after engaging in a fist fight.",
+                "msg": "{0.name} strangles {1.name} after engaging in a fist fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow into {1}'s head.",
+                "msg": "{0.name} shoots an arrow into {1.name}'s head.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bleeds out due to untreated injuries.",
+                "msg": "{0.name} bleeds out due to untreated injuries.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} cannot handle the circumstances and commits suicide.",
+                "msg": "{0.name} cannot handle the circumstances and commits suicide.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} bashes {1}'s head against a rock several times.",
+                "msg": "{0.name} bashes {1.name}'s head against a rock several times.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} snaps {1}'s neck.",
+                "msg": "{0.name} snaps {1.name}'s neck.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} decapitates {1} with a sword.",
+                "msg": "{0.name} decapitates {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} dies from an infection.",
+                "msg": "{0.name} dies from an infection.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} spears {1} in the abdomen.",
+                "msg": "{0.name} spears {1.name} in the abdomen.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets {1} on fire with a molotov.",
+                "msg": "{0.name} sets {1.name} on fire with a molotov.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a pit and dies.",
+                "msg": "{0.name} falls into a pit and dies.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0} stabs {1} while {{ if 3  }}his{{ else }}her{{ endif }} back is turned.",
+                "msg": "{0.name} stabs {1.name} while {1.genG} back is turned.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1}, but puts {{ if 3 }}him{{ else }}her{{ endif }} out of {{ if 3  }}his{{ else }}her{{ endif }} misery.",
+                "msg": "{0.name} severely injures {1.name}, but puts {1.genA} out of {1.genG} misery.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} to die.",
+                "msg": "{0.name} severely injures {1.name} and leaves {1.genA} to die.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} bashes {1}'s head in with a mace.",
+                "msg": "{0.name} bashes {1.name}'s head in with a mace.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} pushes {1} off a cliff during a knife fight.",
+                "msg": "{0.name} pushes {1.name} off a cliff during a knife fight.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} throws a knife into {1}'s chest.",
+                "msg": "{0.name} throws a knife into {1.name}'s chest.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}'s trap kills {1}",
+                "msg": "{0.name}'s trap kills {1.name}",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} is unable to convince {1} to not kill {{ if 2 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} is unable to convince {1.name} to not kill {0.genA}.",
                 "tributes": 2,
                 "killer": [1],
                 "killed": [0]
             },
             {
-                "msg": "{0} convinces {1} not to kill {{ if 2 }}him{{ else }}her{{ endif }}, only to kill {{ if 3 }}him{{ else }}her{{ endif }} instead.",
+                "msg": "{0.name} convinces {1.name} not to kill {0.genA}, only to kill {1.genA} instead.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} falls into a frozen lake and drowns.",
+                "msg": "{0.name} falls into a frozen lake and drowns.",
                 "tributes": 1,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0]
             },
             {
-                "msg": "{0}, {1}, and {2} start fighting, but {1} runs away as {0} kills {2}.",
+                "msg": "{0.name}, {1.name}, and {2.name} start fighting, but {1.name} runs away as {0.name} kills {2.name}.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} kills {1} with {{ if 3  }}his{{ else }}her{{ endif }} own weapon.",
+                "msg": "{0.name} kills {1.name} with {1.genG} own weapon.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} overpowers {1}, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} overpowers {1.name}, killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1} and {2}",
+                "msg": "{0.name} sets an explosive off, killing {1.name} and {2.name}",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, and {3}.",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, and {3.name}.",
                 "tributes": 4,
                 "killer": [0],
                 "killed": [1, 2, 3]
             },
             {
-                "msg": "{0} sets an explosive off, killing {1}, {2}, {3}, and {4}",
+                "msg": "{0.name} sets an explosive off, killing {1.name}, {2.name}, {3.name}, and {4.name}",
                 "tributes": 5,
                 "killer": [0],
                 "killed": [1, 2, 3, 4]
             },
             {
-                "msg": "{0} kills {1} as {{ if 3  }}he{{ else }}she{{ endif }} tries to run.",
+                "msg": "{0.name} kills {1.name} as {1.genN} tries to run.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} threaten a double suicide. It fails and they die.",
+                "msg": "{0.name} and {1.name} threaten a double suicide. It fails and they die.",
                 "tributes": 2,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} form a suicide pact, killing themselves.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} form a suicide pact, killing themselves.",
                 "tributes": 4,
-                "killer": [-1],
+                "killer": [],
                 "killed": [0, 1, 2, 3]
             },
             {
-                "msg": "{0} kills {1} with a hatchet.",
+                "msg": "{0.name} kills {1.name} with a hatchet.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {0} and {1} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {0.name} and {1.name} survive.",
                 "tributes": 4,
                 "killer": [0, 1],
                 "killed": [2, 3]
             },
             {
-                "msg": "{0} and {1} fight {2} and {3}. {2} and {3} survive.",
+                "msg": "{0.name} and {1.name} fight {2.name} and {3.name}. {2.name} and {3.name} survive.",
                 "tributes": 4,
                 "killer": [2, 3],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} attacks {1}, but {2} protects {{ if 3 }}him{{ else }}her{{ endif }}, killing {0}",
+                "msg": "{0.name} attacks {1.name}, but {2.name} protects {1.genA}, killing {0.name}",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0]
             },
             {
-                "msg": "{0} ambushes {1} and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} ambushes {1.name} and kills {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} severely slices {1} with a sword.",
+                "msg": "{0.name} severely slices {1.name} with a sword.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} strangles {1} with a rope",
+                "msg": "{0.name} strangles {1.name} with a rope",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} kills {1} for {{ if 3  }}his{{ else }}her{{ endif }} supplies.",
+                "msg": "{0.name} kills {1.name} for {1.genG} supplies.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} shoots an arrow at {1}, but misses and kills {2} instead",
+                "msg": "{0.name} shoots an arrow at {1.name}, but misses and kills {2.name} instead",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [2]
             },
             {
-                "msg": "{0} shoots a poisonous blow dart into {1}'s neck, slowly killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                "msg": "{0.name} shoots a poisonous blow dart into {1.name}'s neck, slowly killing {1.genA}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, and {2} successfully ambush and kill {3}, {4}, and {5}.",
+                "msg": "{0.name}, {1.name}, and {2.name} successfully ambush and kill {3.name}, {4.name}, and {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2],
                 "killed": [3, 4, 5]
             },
             {
-                "msg": "{0}, {1}, and {2} unsuccessfully ambush {3}, {4}, and {5}, who kill them instead.",
+                "msg": "{0.name}, {1.name}, and {2.name} unsuccessfully ambush {3.name}, {4.name}, and {5.name}, who kill them instead.",
                 "tributes": 6,
                 "killer": [3, 4, 5],
                 "killed": [0, 1, 2]
             },
             {
-                "msg": "{0} stabs {1} wth a tree branch.",
+                "msg": "{0.name} stabs {1.name} wth a tree branch.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} stabs {1} in the back with a trident.",
+                "msg": "{0.name} stabs {1.name} in the back with a trident.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {0} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {0.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [0],
                 "killed": [1, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {1} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {1.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [1],
                 "killed": [0, 2]
             },
             {
-                "msg": "{0}, {1}, and {2} get into a fight. {2} triumphantly kills them both.",
+                "msg": "{0.name}, {1.name}, and {2.name} get into a fight. {2.name} triumphantly kills them both.",
                 "tributes": 3,
                 "killer": [2],
                 "killed": [0, 1]
             },
             {
-                "msg": "{0} kills {1} with a sickle.",
+                "msg": "{0.name} kills {1.name} with a sickle.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0}, {1}, {2}, {3}, and {4} track down and kill {5}.",
+                "msg": "{0.name}, {1.name}, {2.name}, {3.name}, and {4.name} track down and kill {5.name}.",
                 "tributes": 6,
                 "killer": [0, 1, 2, 3, 4],
                 "killed": [5]
             },
             {
-                "msg": "{0}, {1}, {2}, and {3} track down and kill {4}.",
+                "msg": "{0.name}, {1.name}, {2.name}, and {3.name} track down and kill {4.name}.",
                 "tributes": 5,
                 "killer": [0, 1, 2, 3],
                 "killed": [4]
             },
             {
-                "msg": "{0}, {1}, and {2} track down and kill {3}.",
+                "msg": "{0.name}, {1.name}, and {2.name} track down and kill {3.name}.",
                 "tributes": 4,
                 "killer": [0, 1, 2],
                 "killed": [3]
             },
             {
-                "msg": "{0} and {1} track down and kill {2}.",
+                "msg": "{0.name} and {1.name} track down and kill {2.name}.",
                 "tributes": 3,
                 "killer": [0, 1],
                 "killed": [2]
             },
             {
-                "msg": "{0} tracks down and kills {1}.",
+                "msg": "{0.name} tracks down and kills {1.name}.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
             },
             {
-                "msg": "{0} repeatedly stabs {1} to death with sais.",
+                "msg": "{0.name} repeatedly stabs {1.name} to death with sais.",
                 "tributes": 2,
                 "killer": [0],
                 "killed": [1]
@@ -2155,39 +2154,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is crushed by a pack of wolf mutts.",
+                    "msg": "{0.name} is crushed by a pack of wolf mutts.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} is eaten by wolf mutts.",
+                    "msg": "{0.name} is eaten by wolf mutts.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} knocks {1} out and leaves {{ if 3 }}him{{ else }}her{{ endif }} for the wolf mutts.",
+                    "msg": "{0.name} knocks {1.name} out and leaves {1.genA} for the wolf mutts.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} pushes {1} into a pack of wolf mutts.",
+                    "msg": "{0.name} pushes {1.name} into a pack of wolf mutts.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "As {0} and {1} fight, a pack of wolf mutts show up and kill them both.",
+                    "msg": "As {0.name} and {1.name} fight, a pack of wolf mutts show up and kill them both.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2198,39 +2197,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is unable to find shelter and dies.",
+                    "msg": "{0.name} is unable to find shelter and dies.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} trips face first into a puddle of acidic rain.",
+                    "msg": "{0.name} trips face first into a puddle of acidic rain.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} in the rain to die.",
+                    "msg": "{0.name} injures {1.name} and leaves {1.genA} in the rain to die.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} refuses {1} shelter, killing {{ if 3 }}him{{ else }}her{{ endif }}.",
+                    "msg": "{0.name} refuses {1.name} shelter, killing {1.genA}.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} shoves {1} into a pond of acidic rain, but is pulled in by {1}, killing them both.",
+                    "msg": "{0.name} shoves {1.name} into a pond of acidic rain, but is pulled in by {1.name}, killing them both.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2241,39 +2240,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is engulfed in the cloud of poisonous smoke.",
+                    "msg": "{0.name} is engulfed in the cloud of poisonous smoke.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} sacrifices {{ if 2 }}himself{{ else }}herself{{ endif }} so {1} can get away.",
+                    "msg": "{0.name} sacrifices {0.genS} so {1.name} can get away.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} slowly pushes {1} closer into the cloud until {{ if 3  }}he{{ else }}she{{ endif }} can't resist anymore.",
+                    "msg": "{0.name} slowly pushes {1.name} closer into the cloud until {1.genN} can't resist anymore.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} agree to die in the cloud together, but {0} pushes {1} in without warning.",
+                    "msg": "{0.name} and {1.name} agree to die in the cloud together, but {0.name} pushes {1.name} in without warning.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} decide to run into the cloud together.",
+                    "msg": "{0.name} and {1.name} decide to run into the cloud together.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2284,39 +2283,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is sucked into the hurricane.",
+                    "msg": "{0.name} is sucked into the hurricane.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} is incapacitated by flying debris and dies.",
+                    "msg": "{0.name} is incapacitated by flying debris and dies.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} pushes {1} into an incoming boulder.",
+                    "msg": "{0.name} pushes {1.name} into an incoming boulder.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} stabs {1}, then pushes {{ if 3 }}him{{ else }}her{{ endif }} close enough for the hurricane to suck {{ if 3 }}him{{ else }}her{{ endif }} in",
+                    "msg": "{0.name} stabs {1.name}, then pushes {1.genA} close enough for the hurricane to suck {1.genA} in.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} tries to save {1} from being sucked into the hurricane, only to be sucked in as well.",
+                    "msg": "{0.name} tries to save {1.name} from being sucked into the hurricane, only to be sucked in as well.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2327,39 +2326,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is stung to death.",
+                    "msg": "{0.name} is stung to death.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} slowly dies from the tracker jacker toxins.",
+                    "msg": "{0.name} slowly dies from the tracker jacker toxins.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} knocks {1} unconscious and leaves {{ if 3 }}him{{ else }}her{{ endif }} there as bait.",
+                    "msg": "{0.name} knocks {1.name} unconscious and leaves {1.genA} there as bait.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "While running away from tracker jackers, {0} grabs {1} and throws {{ if 3 }}him{{ else }}her{{ endif }} to the ground.",
+                    "msg": "While running away from tracker jackers, {0.name} grabs {1.name} and throws {1.genA} to the ground.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} run out of places to run and are stung to death.",
+                    "msg": "{0.name} and {1.name} run out of places to run and are stung to death.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2370,39 +2369,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is swept away.",
+                    "msg": "{0.name} is swept away.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} fatally injures {{ if 1 }}himself{{ else }}herself{{ endif }} on debris.",
+                    "msg": "{0.name} fatally injures {0.genS} on debris.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} holds {1} underwater to drown.",
+                    "msg": "{0.name} holds {1.name} underwater to drown.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} defeats {1}, but throws {{ if 3 }}him{{ else }}her{{ endif }} in the water to make sure {{ if 3  }}he{{ else }}she{{ endif }} dies.",
+                    "msg": "{0.name} defeats {1.name}, but throws {1.genA} in the water to make sure {1.genN} dies.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} smash their heads together as the tsunami rolls in, leaving them both to drown.",
+                    "msg": "{0.name} and {1.name} smash their heads together as the tsunami rolls in, leaving them both to drown.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2413,39 +2412,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "The fire catches up to {0}, killing {{ if 1 }}him{{ else }}her{{ endif }}.",
+                    "msg": "The fire catches up to {0.name}, killing {0.genA}.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "A fireball strikes {0}, killing {{ if 1 }}him{{ else }}her{{ endif }}.",
+                    "msg": "A fireball strikes {0.name}, killing {0.genA}.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} kills {1} in order to utilize a body of water safely.",
+                    "msg": "{0.name} kills {1.name} in order to utilize a body of water safely.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} falls to the ground, but kicks {1} hard enough to then push {{ if 2 }}him{{ else }}her{{ endif }} into the fire.",
+                    "msg": "{0.name} falls to the ground, but kicks {1.name} hard enough to then push {2.genA} into the fire.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} fail to find a safe spot and suffocate.",
+                    "msg": "{0.name} and {1.name} fail to find a safe spot and suffocate.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2456,39 +2455,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is electrocuted by the border.",
+                    "msg": "{0.name} is electrocuted by the border.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} trips on a tree root and is unable to recover fast enough.",
+                    "msg": "{0.name} trips on a tree root and is unable to recover fast enough.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} restrains {1} to a tree and leaves {{ if 3 }}him{{ else }}her{{ endif }} to die.",
+                    "msg": "{0.name} restrains {1.name} to a tree and leaves {1.genA} to die.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} pushes {1} into the border while {{ if 3  }}he{{ else }}she{{ endif }} is not paying attention",
+                    "msg": "{0.name} pushes {1.name} into the border while {1.genN} is not paying attention",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "Thinking they could escape, {0} and {1} attempt to run through the border together.",
+                    "msg": "Thinking they could escape, {0.name} and {1.name} attempt to run through the border together.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2499,39 +2498,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} dies from internal bleeding caused by a monkey mutt.",
+                    "msg": "{0.name} dies from internal bleeding caused by a monkey mutt.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} is pummeled to the ground and killed by a troop of monkey mutts.",
+                    "msg": "{0.name} is pummeled to the ground and killed by a troop of monkey mutts.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} uses {1} as a shield from the monkey mutts.",
+                    "msg": "{0.name} uses {1.name} as a shield from the monkey mutts.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} injures {1} and leaves {{ if 3 }}him{{ else }}her{{ endif }} for the monkey mutts.",
+                    "msg": "{0.name} injures {1.name} and leaves {1.genA} for the monkey mutts.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "While running, {0} falls over and grabs {1} on the way down. The monkey mutts kill them.",
+                    "msg": "While running, {0.name} falls over and grabs {1.name} on the way down. The monkey mutts kill them.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2542,39 +2541,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is brutally attacked by a scurry of squirrels.",
+                    "msg": "{0.name} is brutally attacked by a scurry of squirrels.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} tries to kill as many squirrels as {{ if 1 }}he{{ else }}she{{ endif }} can, but there are too many.",
+                    "msg": "{0.name} tries to kill as many squirrels as {0.genN} can, but there are too many.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} uses the squirrels to {{ if 2 }}his{{ else }}her{{ endif }} advantage, shoving {1} into them.",
+                    "msg": "{0.name} uses the squirrels to {0.genG} advantage, shoving {1.name} into them.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0}, in agony, kills {1} so {{ if 3  }}he{{ else }}she{{ endif }} does not have to be attacked by the squirrels.",
+                    "msg": "{0.name}, in agony, kills {1.name} so {1.genN} does not have to be attacked by the squirrels.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "The squirrels separate and kill {0} and {1}.",
+                    "msg": "The squirrels separate and kill {0.name} and {1.name}.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2585,39 +2584,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} is buried in ash.",
+                    "msg": "{0.name} is buried in ash.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} suffocates.",
+                    "msg": "{0.name} suffocates.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} pushes {1} in the lava.",
+                    "msg": "{0.name} pushes {1.name} in the lava.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} dips {{ if 2 }}his{{ else }}her{{ endif }} weapon in the lava and kills {1} with it.",
+                    "msg": "{0.name} dips {0.genG} weapon in the lava and kills {1.name} with it.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "As {0} trips over {1} into the lava, {{ if 2 }}he{{ else }}she{{ endif }} grabs {{ if 3 }}him{{ else }}her{{ endif }} and pulls {{ if 3 }}him{{ else }}her{{ endif }} down with {{ if 2 }}him{{ else }}her{{ endif }}.",
+                    "msg": "As {0.name} trips over {1.name} into the lava, {0.genN} grabs {1.genA} and pulls {1.genA} down with {0.genA}.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2628,39 +2627,39 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} trips on a rock and falls off a cliff.",
+                    "msg": "{0.name} trips on a rock and falls off a cliff.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} accidentally makes contact with spiny, lethal plant life.",
+                    "msg": "{0.name} accidentally makes contact with spiny, lethal plant life.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} flails {{ if 2 }}his{{ else }}her{{ endif }} weapon around, accidentally killing {1}.",
+                    "msg": "{0.name} flails {0.genG} weapon around, accidentally killing {1.name}.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} finds and kills {1}, who was making too much noise.",
+                    "msg": "{0.name} finds and kills {1.name}, who was making too much noise.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "While fighting, {0} and {1} lose their balance, roll down a jagged hillside, and die.",
+                    "msg": "While fighting, {0.name} and {1.name} lose their balance, roll down a jagged hillside, and die.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
@@ -2671,43 +2670,42 @@
             "color": "0xff9c0f",
             "nonfatal": [
                 {
-                    "msg": "{0} survives.",
+                    "msg": "{0.name} survives.",
                     "tributes": 1
                 }
             ],
             "fatal": [
                 {
-                    "msg": "{0} eats a scorpion, thinking it is a delicate dessert.",
+                    "msg": "{0.name} eats a scorpion, thinking it is a delicate dessert.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} hugs a tracker jacker nest, believing it is a pillow.",
+                    "msg": "{0.name} hugs a tracker jacker nest, believing it is a pillow.",
                     "tributes": 1,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0]
                 },
                 {
-                    "msg": "{0} mistakes {1} for a bear and kills {{ if 3 }}him{{ else }}her{{ endif }}.",
+                    "msg": "{0.name} mistakes {1.name} for a bear and kills {1.genA}.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} drowns {1}, who {{ if 2 }}he{{ else }}she{{ endif }} thought was a shark trying to eat {{ if 2 }}him{{ else }}her{{ endif }}.",
+                    "msg": "{0.name} drowns {1.name}, who {0.genN} thought was a shark trying to eat {0.genA}.",
                     "tributes": 2,
                     "killer": [0],
                     "killed": [1]
                 },
                 {
-                    "msg": "{0} and {1} decide to jump down the rabbit hole to Wonderland, which turns out to be a pit of rocks.",
+                    "msg": "{0.name} and {1.name} decide to jump down the rabbit hole to Wonderland, which turns out to be a pit of rocks.",
                     "tributes": 2,
-                    "killer": [-1],
+                    "killer": [],
                     "killed": [0, 1]
                 }
             ]
         }
     ]
-
 }

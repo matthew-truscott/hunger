@@ -37,10 +37,11 @@ pub struct Tribute {
     pub deathday: i32,
     pub killcount: i32,
     pub gender: Gender,
-    pub genN: String,
-    pub genA: String,
-    pub genG: String,
-    pub genS: String,
+    pub gender_label_nominative: String,
+    pub gender_label_accusative: String,
+    pub gender_label_genitive: String,
+    pub gender_label_reflexitive: String,
+    pub avatar: Option<String>
 }
 
 impl Serialize for Tribute {
@@ -51,10 +52,10 @@ impl Serialize for Tribute {
         let mut state = serializer.serialize_struct("Roster", 1)?;
         state.serialize_field("name", &self.name)?;
         state.serialize_field("gender", &self.gender.as_str())?;
-        state.serialize_field("genN", &self.genN.as_str())?;
-        state.serialize_field("genA", &self.genA.as_str())?;
-        state.serialize_field("genG", &self.genG.as_str())?;
-        state.serialize_field("genS", &self.genS.as_str())?;
+        state.serialize_field("genN", &self.gender_label_nominative.as_str())?;
+        state.serialize_field("genA", &self.gender_label_accusative.as_str())?;
+        state.serialize_field("genG", &self.gender_label_genitive.as_str())?;
+        state.serialize_field("genS", &self.gender_label_reflexitive.as_str())?;
         state.skip_field("id")?;
         state.skip_field("alive")?;
         state.skip_field("available")?;
@@ -68,16 +69,18 @@ impl Tribute {
     pub fn new() -> Tribute {
         let tribute_id = TRIBUTE_COUNTER.fetch_add(1, Ordering::SeqCst);
         Tribute{name:String::from("null"), id:tribute_id, alive:false, available:false, deathday:0, killcount:0, gender:Gender::A,
-            genN:String::from("null"), genA:String::from("null"), genG:String::from("null"), genS:String::from("null")}
+            gender_label_nominative:String::from("null"), gender_label_accusative:String::from("null"), 
+            gender_label_genitive:String::from("null"), gender_label_reflexitive:String::from("null"), avatar:None}
     }
-    pub fn from_data(name: &str, gen: &str) -> Tribute {
+    pub fn from_data(name: &str, gen: &str, avatar: &str) -> Tribute {
         let tribute_id = TRIBUTE_COUNTER.fetch_add(1, Ordering::SeqCst);
         let gen_result = match Gender::from_str(gen) {
             Ok(v) => v,
             Err(_) => Gender::A
         };
         Tribute{name:String::from(name), id:tribute_id, alive:true, available:true, deathday:0, killcount:0, gender:gen_result,
-            genN:String::from("null"), genA:String::from("null"), genG:String::from("null"), genS:String::from("null")}
+            gender_label_nominative:String::from("null"), gender_label_accusative:String::from("null"), 
+            gender_label_genitive:String::from("null"), gender_label_reflexitive:String::from("null"), avatar:Some(avatar.to_string())}
     }
     pub fn to_string(self) -> String {
         format!("Name: {}, ID: {}", self.name, self.id)

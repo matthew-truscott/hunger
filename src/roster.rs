@@ -75,6 +75,10 @@ impl Roster {
         let s: String = self.tribute_vec[i].name.clone();
         s
     }
+    pub fn get_avatar(&self, i: usize) -> Option<String> {
+        let o: Option<String> = self.tribute_vec[i].avatar.clone();
+        o
+    }
     pub fn kill(&mut self, i: usize, day: i32) {
         self.tribute_vec[i].alive = false;
         self.tribute_vec[i].available = false;
@@ -118,22 +122,22 @@ impl Roster {
         for item in self.tribute_vec.iter_mut() {
             match item.gender {
                 tribute::Gender::M => {
-                    item.genN = String::from("he");
-                    item.genA = String::from("him");
-                    item.genG = String::from("his");
-                    item.genS = String::from("himself");
+                    item.gender_label_nominative = String::from("he");
+                    item.gender_label_accusative = String::from("him");
+                    item.gender_label_genitive = String::from("his");
+                    item.gender_label_reflexitive = String::from("himself");
                 }
                 tribute::Gender::F => {
-                    item.genN = String::from("she");
-                    item.genA = String::from("her");
-                    item.genG = String::from("her");
-                    item.genS = String::from("herself");
+                    item.gender_label_nominative = String::from("she");
+                    item.gender_label_accusative = String::from("her");
+                    item.gender_label_genitive = String::from("her");
+                    item.gender_label_reflexitive = String::from("herself");
                 }
                 tribute::Gender::A => {
-                    item.genN = String::from("they");
-                    item.genA = String::from("them");
-                    item.genG = String::from("their");
-                    item.genS = String::from("themselves");
+                    item.gender_label_nominative = String::from("they");
+                    item.gender_label_accusative = String::from("them");
+                    item.gender_label_genitive = String::from("their");
+                    item.gender_label_reflexitive = String::from("themselves");
                 }
             }
         }

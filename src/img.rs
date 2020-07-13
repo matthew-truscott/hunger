@@ -1,12 +1,60 @@
+use super::roster;
+
+use std::path::Path;
 use image::{DynamicImage, ImageBuffer, RgbaImage, Rgba};
 use image::GenericImage;
+use image::io::Reader;
 use rusttype::{point, Font, Scale};
+
+// pub fn mount_image<T: GenericImageView>(
+//     (x, y): (u32, u32),
+//     input: T,
+//     clearValue: T::Pixel,
+// ) -> ImageBuffer<T::Pixel, Vec<<T::Pixel as Pixel>::Subpixel>>
+// where
+//     T::Pixel: 'static,
+// {
+//     let mut imageBuffer = ImageBuffer::from_pixel(x, y, clearValue);
+//     imageBuffer.copy_from(&input, 0, 0);
+//     imageBuffer
+// }
+
+pub fn init_thumbs(roster: &roster::Roster) {
+    for i in 0..roster.len() {
+        println!("saving {} as thumbnail...", roster.get_avatar(i).expect("hmm"));
+        let avatar_reader = match roster.get_avatar(i) {
+            Some(avatar_path) => {
+                match Reader::open(format!("input/{}", avatar_path)) {
+                    Ok(result) => Some(result),
+                    Err(error) => {
+                        println!("error: {}", error);
+                        None
+                    }
+                }
+            },
+            None => None
+        };
+    
+        let avatar = match avatar_reader {
+            Some(reader) => {
+                match reader.decode() {
+                    Ok(result) => result.thumbnail(128, 128),
+                    Err(error) => {
+                        println!("warning: avatar image could not be decoded");
+                        DynamicImage::new_rgba8(128, 128)
+                    }
+                }
+            },
+            None => DynamicImage::new_rgba8(128, 128)
+        };
+    };
+}
 
 pub fn image(text_input: String) {
     // Load the font
     let font_data = include_bytes!("../fonts/Roboto-Regular.ttf");
     // This only succeeds if collection consists of one font
-    let font = Font::from_bytes(font_data as &[u8]).expect("Error constructing Font");
+    let font = Font::try_from_bytes(font_data as &[u8]).expect("Error constructing Font");
 
     // The font size to use
     let scale = Scale::uniform(16.0);
@@ -41,13 +89,41 @@ pub fn image(text_input: String) {
     };
 
     // Create a new rgba image with some padding
-    let mut image = DynamicImage::new_rgba8(glyphs_width + 40, glyphs_height + 40).to_rgba();
+    //let mut image = DynamicImage::new_rgba8(glyphs_width + 40, glyphs_height + 40).to_rgba();
     let mut fullimage: RgbaImage = ImageBuffer::from_pixel(
         glyphs_width + 40, 
-        glyphs_height + 40,
+        glyphs_height + 340,
         Rgba([bg_colour.0, bg_colour.1, bg_colour.2, bg_colour.3]));
 
     // set background colour
+
+
+    // Load in image from file
+
+    let avatar_reader = match Reader::open("input/avatar2.png") {
+        Ok(result) => Some(result),
+        Err(error) => {
+            println!("error: {}", error);
+            None
+        }
+    };
+
+    let avatar = match avatar_reader {
+        Some(reader) => {
+            match reader.decode() {
+                Ok(result) => result.thumbnail(128, 128),
+                Err(error) => {
+                    println!("warning: avatar image could not be decoded");
+                    DynamicImage::new_rgba8(128, 128)
+                }
+            }
+        },
+        None => DynamicImage::new_rgba8(128, 128)
+    };
+
+    // println!("load successful!");
+
+    fullimage.copy_from(&avatar, 100, 100);
 
 
     // Loop through the glyphs in the text, positing each one on a line
@@ -64,7 +140,7 @@ pub fn image(text_input: String) {
                 fullimage.put_pixel(
                     // Offset the position by the glyph bounding box
                     x + bounding_box.min.x as u32,
-                    y + bounding_box.min.y as u32,
+                    y + 300 + bounding_box.min.y as u32,
 
                     Rgba([r, g, b, a]),
                 )

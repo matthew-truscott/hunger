@@ -228,7 +228,8 @@ fn create_roster_from_files(game_roster: &mut roster::Roster) -> i32 {
             for i in 1..number_of_tributes+1 {
                 let test_tribute = tribute::Tribute::from_data(
                     v[format!("{}", i)]["name"].as_str().unwrap(),
-                    v[format!("{}", i)]["gender"].as_str().unwrap());
+                    v[format!("{}", i)]["gender"].as_str().unwrap(),
+                    v[format!("{}", i)]["avatar"].as_str().unwrap());
                 game_roster.add_tribute(Box::new(test_tribute));
             }
             stage = 1;
@@ -337,9 +338,13 @@ fn main() {
     for i in 1..number_of_tributes+1 {
         let test_tribute = tribute::Tribute::from_data(
             v[format!("{}", i)]["name"].as_str().unwrap(),
-            v[format!("{}", i)]["gender"].as_str().unwrap());
+            v[format!("{}", i)]["gender"].as_str().unwrap(),
+            v[format!("{}", i)]["avatar"].as_str().unwrap());
         game_roster.add_tribute(Box::new(test_tribute));
     }
+
+    // create thumbnails before to save time
+    img::init_thumbs(&game_roster);
 
     let status = game::gameloop(&mut game_roster);
     
