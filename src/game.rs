@@ -124,9 +124,11 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
         let event_key = step_type.as_str();
 
         if step_type == RoundType::FALLEN {
-            println!(
-                "{} cannon shots can be heard from the distance.",
-                game_roster.count_dead_on_day(day));
+            let fallen_text = format!("{} cannon shots can be heard from the distance.", game_roster.count_dead_on_day(day));
+            println!("{}", fallen_text);
+            let fallen_members = game_roster.get_dead_indices(day);
+            img::image(fallen_text, game_roster, &fallen_members, &imgidx);
+            imgidx += 1;
             if game_roster.count_dead_on_day(day) == 0 {
                 consecutive_rounds_without_deaths += 1;
             }
@@ -170,9 +172,14 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
         let rendered = tt.render("title_tmp", &title_map);
 
         match rendered {
-            Ok(r) => println!("{}", r),
+            Ok(r) => {
+                println!("{}", r);
+                img::image(r, game_roster, &vec![], &imgidx);
+                imgidx += 1;
+            }
             Err(e) => println!("rendering error.\n {}", e)
         }
+
         
         game_roster.activate();
         let mut action_members: Vec<usize> = Vec::with_capacity(game_roster.n_available() as usize);

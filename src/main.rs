@@ -344,10 +344,7 @@ fn main() {
     }
 
     // create thumbnails before to save time
-    match img::init_thumbs(&game_roster) {
-        Ok(_) => (),
-        Err(error) => println!("{}", error)
-    };
+    img::init_thumbs(&game_roster);
 
     let status = game::gameloop(&mut game_roster);  
 }

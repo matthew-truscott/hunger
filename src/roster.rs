@@ -79,6 +79,15 @@ impl Roster {
         let o: Option<String> = self.tribute_vec[i].avatar.clone();
         o
     }
+    pub fn get_dead_indices(&self, day: i32) -> Vec<usize> {
+        let mut dead: Vec<usize> = Vec::with_capacity(self.len());
+        for (idx, item) in self.tribute_vec.iter().enumerate() {
+            if item.deathday == day {
+                dead.push(idx);
+            }
+        }
+        dead
+    }
     pub fn kill(&mut self, i: usize, day: i32) {
         self.tribute_vec[i].alive = false;
         self.tribute_vec[i].available = false;
