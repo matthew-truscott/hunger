@@ -62,6 +62,7 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
     }
     // let mut eventlog
 
+    let mut imgidx: u32 = 0;
     loop {
         let mut tt = TinyTemplate::new();
         let mut input = String::new();
@@ -259,17 +260,15 @@ pub fn gameloop(game_roster: &mut roster::Roster) -> i32 {
 
             let rendered = tt.render("msg_tmp", &context_map);
 
-
-
             match rendered {
                 Ok(r) => {
                     println!("{}", r);
-                    img::image(r);
+                    img::image(r, game_roster, &action_members, &imgidx);
                 }
                 Err(e) => println!("rendering error.\n {}", e)
             }
 
-                       
+            imgidx += 1;       
             
             // process::exit(0x0000)
 
